@@ -1,0 +1,31 @@
+{
+  "extends": ["./.eslintrc"],
+  "rules": {
+    // prettier
+    "prettier/prettier": "error",
+
+    // react
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+
+    // common
+    "semi": "error",
+    "curly": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^(props|e|event|route|_.*|setState|getState|styles|args)$",
+        "varsIgnorePattern": "^(props|e|event|route|_.*|setState|getState|styles|args)$"
+      }
+    ],
+    "no-multiple-empty-lines": "error",
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-constant-condition": "error"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "postinstall": "npx husky install",
+    "start": "bash ./start.sh"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "husky": "^8.0.3"
+  }
+}

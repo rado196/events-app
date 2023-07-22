@@ -1,0 +1,8 @@
+.husky
+node_modules
+dist
+build
+
+.gitignore
+package.json
+README.md

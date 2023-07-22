@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+cd "$(dirname "$0")/../" || exit 1
+
+FOLDERS=("frotnend" "backend")
+for FOLDER in ${FOLDERS[@]}; do
+  cd "$FOLDER"
+
+  SCRIPT_FILE="./scripts/hooks/pre-commit.sh"
+  if [[ -f "$SCRIPT_FILE" ]]; then
+    bash $SCRIPT_FILE
+    if [[ $? != 0 ]]; then
+      exit 2
+    fi
+  fi
+
+  cd ..
+done
